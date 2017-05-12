@@ -3,6 +3,5 @@ set -o errexit
 set -o nounset
 set -o xtrace
 
-wget $1
-wget $2
-/dockstore tool launch --local-entry $1 --json $2
+wget $2 -O params.json
+dockstore tool launch --entry $1 --json params.json

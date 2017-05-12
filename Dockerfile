@@ -9,3 +9,4 @@ RUN chmod a+x dockstore
 RUN mv dockstore /bin
 ENV DOCKSTORE_ROOT 1
 RUN dockstore
+ADD test.sh test.sh
