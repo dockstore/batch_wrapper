@@ -9,4 +9,5 @@ RUN chmod a+x dockstore
 RUN mv dockstore /bin
 ENV DOCKSTORE_ROOT 1
 RUN dockstore
+RUN dockstore plugin download
 ADD test.sh test.sh
