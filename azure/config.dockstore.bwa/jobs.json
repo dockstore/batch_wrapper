@@ -1,0 +1,21 @@
+{
+    "job_specifications": [
+        {
+            "id": "dockstorejob",
+            "tasks": [
+                {
+                    "image": "quay.io/dockstore/batch_wrapper:1.0",
+                    "remove_container_after_exit": true,
+		    "environment_variables": {
+                        "AWS_ACCESS_KEY_ID": "<your aws s3 key id here>",
+                        "AWS_SECRET_ACCESS_KEY": "<your aws s3 secret key here>"
+                    },
+                    "command": "/test.sh quay.io/pancancer/pcawg-bwa-mem-workflow:2.6.8_1.2 https://raw.githubusercontent.com/dockstore/batch_wrapper/master/aws/bwa.s3.json",
+		    "additional_docker_run_options": [
+			    "--privileged","-v /var/run/docker.sock:/var/run/docker.sock"
+                    ]
+                }
+            ]
+        }
+    ]
+}

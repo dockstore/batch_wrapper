@@ -1,0 +1,18 @@
+{
+    "batch_shipyard": {
+        "storage_account_settings": "<your storage account here>"
+    },
+    "global_resources": {
+        "docker_images": [
+            "quay.io/dockstore/batch_wrapper:1.0"
+        ]
+    },
+    "docker_volumes": {
+            "data_volumes": {
+                "docker": {
+                    "host_path": "/var/run/docker.sock",
+                    "container_path": "/var/run/docker.sock"
+                }
+            }
+        }
+}
