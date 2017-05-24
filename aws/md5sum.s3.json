@@ -1,0 +1,10 @@
+{
+  "input_file": {
+        "class": "File",
+        "path": "https://raw.githubusercontent.com/briandoconnor/dockstore-tool-md5sum/master/md5sum.input"
+    },
+    "output_file": {
+        "class": "File",
+        "path": "s3://dockstore.temp/md5sum.txt"
+    }
+}
